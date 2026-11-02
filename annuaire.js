@@ -3,6 +3,12 @@
 // et qui n'ont pas désactivé l'annuaire dans leur espace apparaissent.
 (() => {
   "use strict";
+// Cadrage choisi par le coach (point gardé au centre, zoom), appliqué par variables CSS.
+function cropStyle(c) {
+  if (!c || typeof c !== "object") return "";
+  const n = (v, lo, hi, d) => { v = Number(v); return Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : d; };
+  return ` style="--fx:${n(c.x, 0, 100, 50)}%;--fy:${n(c.y, 0, 100, 50)}%;--fz:${n(c.z, 1, 3, 1)}"`;
+}
   const CFG = window.PCW_SUPABASE || { url: "", anonKey: "" };
   const $ = (id) => document.getElementById(id);
   const grid = $("dir-grid"), count = $("dir-count"), qInput = $("dir-q"), sortSel = $("dir-sort"), citiesBox = $("dir-cities");
@@ -52,7 +58,7 @@
     const clubs = (c.clubs || []).slice(0, 3);
     return `<article class="coach-card" style="--c:${color};--a:${accent};--i:${Math.min(i, 8)}">
       <a class="coach-card__media" href="${esc(url)}" tabindex="-1" aria-hidden="true">
-        ${photo ? `<img src="${esc(photo)}" alt="" loading="lazy">` : `<span class="coach-card__ini">${esc(initials(c.name))}</span>`}
+        ${photo ? `<img src="${esc(photo)}" alt="" loading="lazy"${cropStyle(c.photo_crop)}>` : `<span class="coach-card__ini">${esc(initials(c.name))}</span>`}
         ${c.city ? `<span class="coach-card__city">${esc(c.city)}</span>` : ""}
       </a>
       <div class="coach-card__body">
