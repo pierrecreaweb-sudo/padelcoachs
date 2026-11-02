@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page introuvable | PCW Padel Coach</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0E2A52">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/brand/pcw-favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<!-- Servie par GitHub Pages pour toute adresse inconnue : chemins depuis la racine. -->
+<link rel="stylesheet" href="/base.css">
+<style>
+  body { min-height: 100vh; display: flex; flex-direction: column; }
+  .nf { flex: 1; display: grid; place-items: center; text-align: center; padding-block: 48px 72px; }
+  .nf__code { display: flex; justify-content: center; align-items: center; gap: .06em; margin: 0 0 6px;
+    font: 900 clamp(110px, 28vw, 190px)/.9 var(--f-display); font-stretch: 118%; letter-spacing: -.02em; color: var(--on-dark); }
+  .nf__ball { width: .74em; height: .74em; border-radius: 50%; background: var(--ball);
+    box-shadow: inset -.09em -.07em 0 rgba(0, 0, 0, .14), 0 .08em .16em rgba(0, 0, 0, .35); animation: nfb 1.6s cubic-bezier(.3, 0, .4, 1) infinite; }
+  @keyframes nfb { 0%, 100% { transform: translateY(0); } 45%, 55% { transform: translateY(-.16em); } }
+  .nf h1 { font-size: clamp(32px, 7vw, 52px); margin-bottom: 12px; color: var(--ball); }
+  .nf p { margin: 0 auto 30px; max-width: 30em; color: var(--on-dark-muted); }
+  .top .btn { margin-left: auto; }
+  .nf .nf__links { margin: 28px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; font-size: 15px; }
+  .nf__links a { color: var(--on-dark-muted); }
+  .nf__links a:hover { color: var(--on-dark); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="logo" aria-label="PCW Padel Coach" href="/"><img class="logo__mark logo__mark--on-dark" src="/brand/pcw-glyph-on-dark.svg" alt="" width="22" height="27"><img class="logo__mark logo__mark--on-light" src="/brand/pcw-glyph-on-light.svg" alt="" width="22" height="27"><span class="logo__txt"><small>PCW</small><b>Padel Coach</b></span></a>
+    <a class="btn btn--ball btn--sm" href="/">Trouver un coach</a>
+  </div>
+</header>
+<main class="hero nf">
+  <div class="wrap">
+    <div class="nf__code" aria-hidden="true"><span>4</span><span class="nf__ball"></span><span>4</span></div>
+    <h1>Balle dehors !</h1>
+    <p>Cette page n'existe pas ou a été déplacée. Revenez sur le terrain : tous les coachs sont sur la page d'accueil de l'annuaire.</p>
+    <div class="hero__cta" style="justify-content:center">
+      <a class="btn btn--ball" href="/">Trouver un coach</a>
+    </div>
+    <p class="nf__links"><a href="/#resultats">Les coachs</a><a href="/mentions.html">Mentions légales</a><a href="https://pcwpadel.fr/">Vous êtes coach ?</a></p>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="logo" aria-label="PCW Padel Coach" href="/"><img class="logo__mark logo__mark--on-dark" src="/brand/pcw-glyph-on-dark.svg" alt="" width="22" height="27"><img class="logo__mark logo__mark--on-light" src="/brand/pcw-glyph-on-light.svg" alt="" width="22" height="27"><span class="logo__txt"><small>PCW</small><b>Padel Coach</b></span></a>
+    <p>Annuaire des coachs PCW Padel Coach · <a href="/mentions.html">Mentions légales</a></p>
+  </div>
+</footer>
+</body>
+</html>
